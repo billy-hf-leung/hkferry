@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+    <html lang="en">
+        <head>
+            <title>Ferry HK</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300&display=swap">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+            <link rel="stylesheet" href="style.css">
+            <link rel="stylesheet" href="swiper-5.4.5/package/css/swiper.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+        </head>
+        <body>
+        <!-- <header> -->
+        <nav class="navbar sticky-top navbar-expand-lg navbar-light rounded bg-white">
+            <a class="navbar-brand" href="#">
+                <img src="carIcon.svg" width="30" height="30" class="d-inline-block align-top" alt="">
+                Ferry HK
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse" id="navbarsExample09">
+              <ul class="navbar-nav mr-auto">
+                <!--
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">首頁 <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">港外線</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">港內線</a>
+                </li>
+                    <li class="nav-item">
+                    <a class="nav-link disabled" href="#">Disabled</a>
+                    </li>
+                -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    港外線
+                  </a>
+                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    港內線
+                  </a>
+                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    街渡
+                  </a>
+                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    其他
+                  </a>
+                    <!-- Here's the magic. Add the .animate and .slide-in classes to your .dropdown-menu and you're all set! -->
+                    <div class="dropdown-menu dropdown-menu-right animate slideIn" aria-labelledby="navbarDropdown">
+                      <a class="dropdown-item" href="#">Action</a>
+                      <a class="dropdown-item" href="#">Another action</a>
+                      <div class="dropdown-divider"></div>
+                      <a class="dropdown-item" href="#">Something else here</a>
+                    </div>
+                </li>
+              </ul>
+              <!--
+              <form class="form-inline my-2 my-md-0">
+                <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+              </form>
+              -->
+            </div>
+        </nav>
+        <!-- </header> -->
+
+        <div class="content">
+        <div class="route-swiper">
+          <div class="swiper-container">
+            <div class="swiper-wrapper" id="swiper-wrapper">
+              <script>
+                for (var i = 0; i < 20; i++){
+                  var newTestDiv = document.createElement("div");
+                  newTestDiv.setAttribute("class", "swiper-slide");
+                  document.getElementById("swiper-wrapper").appendChild(newTestDiv);
+                }
+              </script>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>  
+            
+        <!-- Swiper JS -->
+        <script src="swiper-5.4.5/package/js/swiper.min.js"></script>
+        
+        <!-- Initialize Swiper -->
+        <script>
+          var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 2.5,
+            spaceBetween: 40,
+            freeMode: true,
+            width: 470,
+            pagination: {
+              el: '.swiper-pagination',
+              type: 'custom',
+              //clickable: true,
+              //dynamicBullets: true,
+              //dynamicMainBullets: 1,
+            },
+          });
+        </script>
+
+        <div class="ferry-schedule-board">
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-sm-3">
+              </div>
+              <div class="col-sm-6" id="ferryDiv">
+                <!-- <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div>
+                <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div>
+                <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div>
+                <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div>
+                <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div>
+                <div class="col-md-auto" id="ferry-time">
+                  <div class="row" id="ferryRow">
+                    <div class="col-sm-8" id="ferryInfo">8</div>
+                    <div class="col-sm-4" id="ferryPrice">4</div>
+                  </div>
+                </div> -->
+                <div id="accordion">
+                  <div class="card">
+                    <div class="card-header" id="headingOne">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          Collapsible Group Item #1
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingTwo">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          Collapsible Group Item #2
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                  <div class="card">
+                    <div class="card-header" id="headingThree">
+                      <h5 class="mb-0">
+                        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          Collapsible Group Item #3
+                        </button>
+                      </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                      <div class="card-body">
+                        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-3">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--footer-->
+        <div class="footer-container">
+          <footer class="container-fluid py-5">
+            <div class="row">
+              <div class="col-12 col-md">
+                <!--<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="d-block mb-2"><circle cx="12" cy="12" r="10"></circle><line x1="14.31" y1="8" x2="20.05" y2="17.94"></line><line x1="9.69" y1="8" x2="21.17" y2="8"></line><line x1="7.38" y1="12" x2="13.12" y2="2.06"></line><line x1="9.69" y1="16" x2="3.95" y2="6.06"></line><line x1="14.31" y1="16" x2="2.83" y2="16"></line><line x1="16.62" y1="12" x2="10.88" y2="21.94"></line></svg>-->
+                <a href=""><img src="img/ferry.png" alt="2Fast" width="170" height="170"></a>
+                <!--<small class="d-block mb-3 text-muted">&copy; 2Fast 2020-2021</small>-->
+              </div>
+              <div class="col-6 col-md">
+                <h5>港外線</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">中環—長洲</a></li>
+                  <li><a class="text-muted" href="#">中環—梅窩</a></li>
+                  <li><a class="text-muted" href="#">中環—坪洲</a></li>
+                  <li><a class="text-muted" href="#">中環—榕樹灣</a></li>
+                  <li><a class="text-muted" href="#">中環—索罟灣</a></li>
+                  <li><a class="text-muted" href="#">中環—愉景灣</a></li>
+                  <li><a class="text-muted" href="#">馬灣—中環</a></li>
+                  <li><a class="text-muted" href="#">馬灣—荃灣 </a></li>
+                  <li><a class="text-muted" href="#">坪洲—梅窩—芝蔴灣—長洲</a></li>
+                  <li><a class="text-muted" href="#">香港仔—索罟灣（經模達）</a></li>
+                  <li><a class="text-muted" href="#">香港仔—北角村—榕樹灣</a></li>
+                  <li><a class="text-muted" href="#">屯門—東涌—沙螺灣—大澳</a></li>
+                  <li><a class="text-muted" href="#">愉景灣—梅窩</a></li>
+                  <li><a class="text-muted" href="#">北角—大廟灣</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>港內線</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">中環—紅磡</a></li>
+                  <li><a class="text-muted" href="#">中環—尖沙咀</a></li>
+                  <li><a class="text-muted" href="#">北角—紅磡</a></li>
+                  <li><a class="text-muted" href="#">北角—九龍城</a></li>
+                  <li><a class="text-muted" href="#">北角—觀塘—啟德</a></li>
+                  <li><a class="text-muted" href="#">灣仔—尖沙咀</a></li>
+                  <li><a class="text-muted" href="#">西灣河—觀塘</a></li>
+                  <li><a class="text-muted" href="#">西灣河—三家村</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>街渡</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">香港仔/赤柱—蒲台島</a></li>
+                  <li><a class="text-muted" href="#">馬料水—荔枝窩</a></li>
+                  <li><a class="text-muted" href="#">馬料水—東平洲</a></li>
+                  <li><a class="text-muted" href="#">馬料水—塔門</a></li>
+                  <li><a class="text-muted" href="#">塔門—黃石碼頭</a></li>
+                  <li><a class="text-muted" href="#">黃石碼頭—灣仔(南風灣)/赤徑</a></li>
+                  <li><a class="text-muted" href="#">沙頭角—鴨洲/吉澳</a></li>
+                  <li><a class="text-muted" href="#">坪洲/聖母神樂院—  愉景灣</a></li>
+                  <li><a class="text-muted" href="#">長洲公眾碼頭—  西灣</a></li>
+                  <li><a class="text-muted" href="#">模達—索罟灣</a></li>
+                  <li><a class="text-muted" href="#">香港仔—模達</a></li>
+                  <li><a class="text-muted" href="#">香港仔—鴨脷洲</a></li>
+                  <li><a class="text-muted" href="#">西貢—伙頭墳洲</a></li>
+                  <li><a class="text-muted" href="#">馬料水─吉澳／鴨洲</a></li>
+                  <li><a class="text-muted" href="#">三家村—東龍島</a></li>
+                  <li><a class="text-muted" href="#">西灣河—東龍島</a></li>
+                </ul>
+              </div>
+              <div class="col-6 col-md">
+                <h5>其他</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted" href="#">電召快艇服務</a></li>
+                  <li><a class="text-muted" href="#">遊艇</a></li>
+                  <li><a class="text-muted" href="#">水上活動</a></li>
+                  <li><a class="text-muted" href="#">釣魚</a></li>
+                </ul>
+                <br>
+                <h5>關於我們</h5>
+                <ul class="list-unstyled text-small">
+                  <li><a class="text-muted">商業合作: testingFerry@gmail.com</a></li>
+                  <!--<li><a class="text-muted" href="#">Education</a></li>-->
+                </ul>
+              </div>
+            </div>
+            <small class="d-block mb-3 text-muted">Copyright &copy; 2020-2021 ferryhk.com All rights reserved.</small>
+            <div class="socialLinks">
+              <a href="#" class="fa fa-facebook"></a>
+              <a href="#" class="fa fa-twitter"></a>
+              <a href="#" class="fa fa-instagram"></a>
+            </div>
+          </footer>
+        </div>
+        <!--footer-->
+        </body>
+    </html>

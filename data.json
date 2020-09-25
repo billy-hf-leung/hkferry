@@ -1,0 +1,50 @@
+{
+    "popularList": {
+        "first": "CHEUNG CHAU",
+        "second": "MUI WO"
+    } ,
+    "line": {
+        "operatedBy": "New World Ferry",
+        "departure": "Central",
+        "destination": "CHEUNG CHAU",
+        "type": {
+            "ordinary": {
+                "class": {
+                    "ordinary":{
+                        "fare": {
+                            "adult":{
+                                "normal": 12.5,
+                                "holiday": 18.6
+                            },
+                            "other":{
+                                "normal": 6.3,
+                                "holiday": 9.3
+                            }
+                        }
+                    },
+                    "deluxe":{
+                        "fare": {
+                            "adult":{
+                                "normal": 19.6,
+                                "holiday": 28.5
+                            },
+                            "other":{
+                                "normal": 9.8,
+                                "holiday": 14.3
+                            }
+                        }
+                    }
+                }
+            },
+            "fast": {
+                "fare": {
+                    "normal": 19.6,
+                    "holiday": 28.5
+                }
+            }
+        },
+        "schedule": {
+            "time": "time1"
+        }
+    }
+}
